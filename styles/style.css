@@ -77,11 +77,11 @@ p {
 
 .map-container {
   display: grid;
-  grid-template-rows: auto 1fr; /* Added: auto for title, 1fr for map */
+  grid-template-rows: auto 1fr;
   height: 100vh;
   width: 100vw;
   padding: 8px;
-  gap: 4px; /* Added small gap between title and map */
+  gap: 4px;
   border-radius: 8px;
 }
 
