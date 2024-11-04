@@ -34,7 +34,7 @@ p {
 }
 
 .align-icon {
-  margin-top: 4px;
+  margin-top: 8px;
   margin-right: 8px;
 }
 
@@ -81,7 +81,7 @@ p {
   height: 100vh;
   width: 100vw;
   padding: 8px;
-  gap: 4px;
+  gap: 16px;
   border-radius: 8px;
 }
 
@@ -90,7 +90,7 @@ p {
 }
 
 .radius-sm {
-  border-radius: 8px;
+  border-radius: 16px;
 }
 
 .info-container {
