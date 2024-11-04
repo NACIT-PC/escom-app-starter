@@ -11,11 +11,11 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 // Style for GeoJSON features
 function style(feature) {
     return {
-        // fillColor: "#3388ff",
+        fillColor: "#8a8a8a34",
         weight: 0.5,
         opacity: 0.1,
-        // color: "#2b6bc7",
-        fillOpacity: 0.7,
+        color: "#202020ec",
+        fillOpacity: 0.1,
     };
 }
 
@@ -37,7 +37,7 @@ fetch("./data/geoBoundaries-MWI-ADM3-all/geoBoundaries-MWI-ADM3.geojson")
     .then((geojsonData) => {
         // Add GeoJSON to map
         L.geoJSON(geojsonData, {
-            // style: style,
+            style: style,
             onEachFeature: onEachFeature,
             pointToLayer: (feature, latlng) =>
                 L.circleMarker(latlng, {
