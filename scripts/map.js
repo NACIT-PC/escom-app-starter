@@ -24,6 +24,7 @@ function onEachFeature(feature, layer) {
     if (feature.properties) {
         layer.bindPopup(`
             <div class="info-panel">
+                <h3> The Lights Are ${feature.properties.status}</h3>
                 <h3>${feature.properties.name}</h3>
                 <p>${feature.properties.description}</p>
             </div>
