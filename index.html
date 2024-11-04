@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./plugins/leaflet/leaflet.css" />
+    <script src="./plugins/leaflet/leaflet.js"></script>
+    <title>Map Feature</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="map-container">
+        <!-- Map Section -->
+
+        <div class="location">
+          <i class="ph ph-map-pin align-icon icon"></i>
+          <div class="label">
+            <h1 class="title">Group B1</h1>
+            <p class="subtitle">Nkhotakota, Boma</p>
+          </div>
+        </div>
+
+        <div id="map" class="map"></div>
+      </div>
+      <div class="info-container">
+        <!-- information Section -->
+      </div>
+    </div>
+    <script src="./scripts/map.js"></script>
+  </body>
+</html>
