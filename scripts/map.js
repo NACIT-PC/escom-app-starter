@@ -8,16 +8,16 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
-// // Style for GeoJSON features
-// function style(feature) {
-//     return {
-//         // fillColor: "#3388ff",
-//         weight: 2,
-//         opacity: 1,
-//         // color: "#2b6bc7",
-//         fillOpacity: 0.7,
-//     };
-// }
+// Style for GeoJSON features
+function style(feature) {
+    return {
+        // fillColor: "#3388ff",
+        weight: 0.5,
+        opacity: 0.1,
+        // color: "#2b6bc7",
+        fillOpacity: 0.7,
+    };
+}
 
 // Add popup for each feature
 function onEachFeature(feature, layer) {
@@ -32,7 +32,7 @@ function onEachFeature(feature, layer) {
 }
 
 // Fetch and load GeoJSON data
-fetch("./data/malawi.geojson")
+fetch("./data/geoBoundaries-MWI-ADM3-all/geoBoundaries-MWI-ADM3.geojson")
     .then((response) => response.json())
     .then((geojsonData) => {
         // Add GeoJSON to map
