@@ -16,22 +16,22 @@
     <title>Map Feature</title>
   </head>
   <body>
-    <div class="container">
-      <div class="map-container">
-        <!-- Map Section -->
-
-        <div class="location">
-          <i class="ph ph-map-pin align-icon icon"></i>
-          <div class="label">
-            <h1 class="title">Group B1</h1>
-            <p class="subtitle">Nkhotakota, Boma</p>
+    <div class="space-evenly">
+      <div class="container">
+        <div class="map-container">
+          <!-- Map Section -->
+          <div class="flex content-fit">
+            <i class="ph ph-map-pin align-icon icon"></i>
+            <div class="flex flex-col">
+              <h1 class="text-lg">Group B1</h1>
+              <p class="text-sm gray">Nkhotakota, Boma</p>
+            </div>
           </div>
+          <div id="map" class="map w-100 h-100 radius-sm"></div>
         </div>
-
-        <div id="map" class="map"></div>
-      </div>
-      <div class="info-container">
-        <!-- information Section -->
+        <div class="info-container">
+          <!-- information Section -->
+        </div>
       </div>
     </div>
     <script src="./scripts/map.js"></script>
