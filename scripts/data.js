@@ -57,6 +57,9 @@ function populateTableData() {
     // Add regions from the data
     for (const location of regionData.locations) {
         console.log(location);
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${location.id}</td><td>${location.name}</td><td>${location.locations}</td><td>${location.locations}</td>`;
+        locationSelect.appendChild(row);
     }
 }
 
