@@ -21,18 +21,19 @@
       <div class="container">
         <div class="map-container">
           <!-- Map Section -->
-          <div class="flex content-fit">
-            <i class="ph ph-map-pin align-icon icon"></i>
-            <div class="flex flex-col justify-content-start">
-              <h1 class="text-lg">Group B1</h1>
-              <p class="text-sm gray">Nkhotakota, Boma</p>
-            </div>
+          <div class="flex content-fit flex-row justify-content-center align-items-center">
+            <i class="ph ph-map-pin  icon"></i>
+            
+              <!-- <h1 class="text-lg">Group B1</h1> -->
+              <p class="text-sm gray ml-1">Nkhotakota, Boma</p>
+            
           </div>
           <div id="map" class="map w-100 radius-sm"></div>
         </div>
         <div class="info-container">
           <!-- information Section -->
           <!-- search-bar  -->
+           
           <div class="search-container">
             <input
               type="text"
@@ -54,25 +55,25 @@
                   <th>Time Off</th>
                 </tr>
                 <tr>
-                  <td>Group A</td>
+                  <td>Group A1</td>
                   <td>Chinsapo</td>
                   <td>11hrs</td>
                   <td>6am-7pm</td>
                 </tr>
                 <tr>
-                  <td>Group B</td>
+                  <td>Group B2</td>
                   <td>Airwing</td>
                   <td>2hrs</td>
                   <td>6pm-9pm</td>
                 </tr>
                 <tr>
-                  <td>Group C</td>
+                  <td>Group C1</td>
                   <td>Area 43</td>
                   <td>11hrs</td>
                   <td>7am-10pm</td>
                 </tr>
                 <tr>
-                  <td>Group D</td>
+                  <td>Group C2</td>
                   <td>Area 44</td>
                   <td>8hrs</td>
                   <td>1pm-10pm</td>
@@ -80,17 +81,105 @@
               </table>
             </div>
             <div class="flex flex-col w-100">
-              <div class="flex content-fit  w-100">
+              <div class="flex content-fit  w-100 mb-3">
                 <div class="flex flex-row">
                   <div class="flex align-items-center">
                     <i class="ph ph-funnel icon-sm"></i>
                   </div>
-                  <div class="flex align-items-center">
+                  <div class="flex align-items-center ">
                     <h1 class="text-sm ml-1">Filter</h1>
                   </div>
                 </div>
               </div>
-              <div class="section-indicator"></div>
+              <div class="flex flex-row space-between">
+                <!-- Group -->
+                <div class="flex flex-col">
+                  <div class="flex-row flex mb-2">
+                    <div class="flex align-items-center">
+                      <i class="ph ph-map-pin-simple-area icon-sm"></i>
+                    </div>
+                    <div class="flex align-items-center">
+                      <label class="text-sm ml-1">Group</label>
+                    </div>
+                  </div>
+                  <div class="flex">
+                    <select name="group" id="group" class="styled-select">
+                      <option value="#">Select Group</option>
+                      <option value="a1">A1</option>
+                      <option value="b1">B1</option>
+                      <option value="b2">B2</option>
+                      <option value="c1">C1</option>
+                      <option value="c2">C2</option>
+                    </select>
+                  </div>
+
+                </div>
+
+<!-- Area -->
+<div class="flex flex-col relative">
+    <div class="flex-row flex mb-2">
+        <div class="flex align-items-center">
+            <i class="ph ph-map-pin-simple icon-sm"></i>
+        </div>
+        <div class="flex align-items-center">
+            <label class="text-sm ml-1">Area</label>
+        </div>
+    </div>
+    <div class="flex">
+        <select name="area" id="area" class="styled-select">
+            <option value="">Select Area</option>
+            <option value="balaka">Balaka</option>
+            <option value="blantyre">Blantyre</option>
+            <option value="chikwawa">Chikwawa</option>
+            <option value="chiradzulu">Chiradzulu</option>
+            <option value="chitipa">Chitipa</option>
+            <option value="dedza">Dedza</option>
+            <option value="dowa">Dowa</option>
+            <option value="karonga">Karonga</option>
+            <option value="kasungu">Kasungu</option>
+            <option value="likoma">Likoma</option>
+            <option value="lilongwe">Lilongwe</option>
+            <option value="machinga">Machinga</option>
+            <option value="mangochi">Mangochi</option>
+            <option value="mchinji">Mchinji</option>
+            <option value="mulanje">Mulanje</option>
+            <option value="mwanza">Mwanza</option>
+            <option value="mzimba">Mzimba</option>
+            <option value="neno">Neno</option>
+            <option value="nkhata-bay">Nkhata Bay</option>
+            <option value="nkhotakota">Nkhotakota</option>
+            <option value="nsanje">Nsanje</option>
+            <option value="ntcheu">Ntcheu</option>
+            <option value="ntchisi">Ntchisi</option>
+            <option value="phalombe">Phalombe</option>
+            <option value="rumphi">Rumphi</option>
+            <option value="salima">Salima</option>
+            <option value="thyolo">Thyolo</option>
+            <option value="zomba">Zomba</option>
+        </select>
+    </div>
+</div>
+
+<!-- Region -->
+<div class="flex flex-col">
+    <div class="flex-row flex mb-2">
+        <div class="flex align-items-center">
+            <i class="ph ph-map-pin-simple-line icon-sm"></i>
+        </div>
+        <div class="flex align-items-center">
+            <label class="text-sm ml-1">Region</label>
+        </div>
+    </div>
+    <div class="flex">
+        <select name="region" id="region" class="styled-select">
+            <option value="">Select Region</option>
+            <option value="northern">Northern Region</option>
+            <option value="central">Central Region</option>
+            <option value="southern">Southern Region</option>
+        </select>
+    </div>
+</div>
+              </div>
             </div>
           </div>
         </div>
