@@ -91,6 +91,10 @@ p {
   justify-content: space-between;
 }
 
+.p-4 {
+  padding: 16px;
+}
+
 .container {
   display: flex;
   height: 100%;
