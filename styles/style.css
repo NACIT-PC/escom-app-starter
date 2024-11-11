@@ -136,9 +136,16 @@ p {
   cursor: pointer;
 }
 
-.flex-col {
-  justify-content: start;
+.align-items-center {
   align-items: center;
+}
+
+.justify-content-start {
+  justify-content: start;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .table {
