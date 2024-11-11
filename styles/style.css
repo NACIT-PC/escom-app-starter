@@ -33,6 +33,14 @@ p {
   flex-direction: column;
 }
 
+.flex-col {
+  flex-direction: row;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
 .align-icon {
   margin-top: 8px;
   margin-right: 8px;
@@ -89,6 +97,14 @@ p {
   height: 500px;
 }
 
+.ml-1 {
+  margin-left: 4px;
+}
+
+.mr-1 {
+  margin-right: 4px;
+}
+
 .radius-sm {
   border-radius: 16px;
 }
@@ -120,25 +136,17 @@ p {
   cursor: pointer;
 }
 
-.cont {
-
-  width: 100%;
- 
-  display: flex;
-  flex-direction: column;
-  height: 42rem;
+.flex-col {
   justify-content: start;
   align-items: center;
 }
 
 .table {
-
   width: 32rem;
   height: 12rem;
   padding: 8px;
 
   text-align: center;
-
 }
 
 table {
@@ -186,7 +194,7 @@ th {
   align-self: flex-start;
 }
 
-.filt-input {
+.filter-input {
   border: 2px solid black;
   width: 40%;
   margin: 12px;
@@ -194,8 +202,12 @@ th {
   transition: 1s;
 }
 
-.filt-input:hover {
+.filter-input:hover {
   height: 8rem;
+}
+
+.section-indicator {
+  border: blue 2px solid;
 }
 
 /* .search-button i {
