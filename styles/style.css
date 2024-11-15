@@ -38,6 +38,10 @@ p {
   margin-right: 8px;
 }
 
+.alignment {
+  align-items: center;
+}
+
 .fit-content {
   height: max-content;
 }
@@ -81,9 +85,78 @@ p {
   height: 100vh;
   width: 100vw;
   padding: 8px;
+ 
   gap: 16px;
   border-radius: 8px;
 }
+
+.map {
+  height: 520px;
+  border: 2px solid black;
+  z-index: -2;
+}
+
+.jc-space-even {
+  justify-content: space-evenly;
+}
+
+.font-size {
+  font-size: 40px;
+
+}
+
+.cards {
+
+  height: 16rem;
+  width: 100%;
+
+
+}
+
+.card1 {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  width: 240px;
+  height: 180px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  border-radius: 24px;
+  transition: .5s;
+}
+.card1:hover{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  background-color: #d9e2d6;
+}
+
+.disc {
+  
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.486);
+  height:100%;
+  border-radius: 20px;
+  z-index: 1000;
+  position: relative;
+  align-items: baseline;
+  
+}
+.z-index-bg{
+  z-index: -1000;
+}
+
+.discription {
+  margin: 20px;
+  line-height: 8px;
+  font-weight: lighter;
+}
+.dis-cont{
+  border: 2px solid black;
+  background-color: #cbdfc5;
+  border-radius: 20px;
+  align-items: baseline;
+  width: 100%;
+  height: 12rem;
+  margin-top: auto;
+  }
 
 .h-500px {
   height: 500px;
@@ -123,7 +196,7 @@ p {
 .cont {
 
   width: 100%;
- 
+
   display: flex;
   flex-direction: column;
   height: 42rem;
