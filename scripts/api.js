@@ -133,6 +133,97 @@ async function fetchRegionData() {
     }
 }
 
+// Search Bar
+ // Initialize variables
+ let searchData = [];
+ const searchInput = document.getElementById('searchInput');
+ const resultsContainer = document.getElementById('resultsContainer');
+
+ // Load JSON data when page loads
+ document.addEventListener('DOMContentLoaded', () => {
+     loadJsonData();
+     
+     // Add event listener for search input
+     searchInput.addEventListener('input', handleSearch);
+ });
+
+ // Function to load JSON data
+ async function loadJsonData() {
+     try {
+         // Show loading message
+         resultsContainer.innerHTML = '<div class="loading">Loading data...</div>';
+         
+         // Fetch JSON file
+         const response = await fetch('./data/escom.json');
+         if (!response.ok) {
+             throw new Error('Failed to load data');
+         }
+         
+         // Parse JSON data
+         searchData = await response.json();
+         
+         // Clear loading message
+         resultsContainer.innerHTML = '';
+         
+     } catch (error) {
+         // Show error message
+         resultsContainer.innerHTML = `
+             <div class="error">
+                 Error loading data: ${error.message}
+                 <br>Please make sure your JSON file exists and is accessible.
+             </div>
+         `;
+         console.error('Error:', error);
+     }
+ }
+
+ // Function to handle search
+ function handleSearch(e) {
+     const searchTerm = e.target.value.toLowerCase().trim();
+     
+     // Clear results if search term is empty
+     if (!searchTerm) {
+         resultsContainer.innerHTML = '';
+         return;
+     }
+     
+     // Filter results
+     const filteredResults = searchData.filter(item => 
+         item.title.toLowerCase().includes(searchTerm) ||
+         item.description.toLowerCase().includes(searchTerm)
+     );
+     
+     // Display results
+     displayResults(filteredResults, searchTerm);
+ }
+
+ // Function to display results
+ function displayResults(results, searchTerm) {
+     if (results.length === 0) {
+         resultsContainer.innerHTML = `
+             <div class="no-results">
+                 No results found for "${searchTerm}"
+             </div>
+         `;
+         return;
+     }
+
+     const resultsHTML = results.map(item => `
+         <div class="result-item">
+             <h3>${highlightText(item.title, searchTerm)}</h3>
+             <p>${highlightText(item.description, searchTerm)}</p>
+         </div>
+     `).join('');
+
+     resultsContainer.innerHTML = resultsHTML;
+ }
+
+ // Function to highlight matching text
+ function highlightText(text, searchTerm) {
+     const regex = new RegExp(`(${searchTerm})`, 'gi');
+     return text.replace(regex, '<span class="highlight">$1</span>');
+ }
+
 // Example usage with API:
 
 async function initializeWithAPI() {
