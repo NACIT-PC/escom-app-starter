@@ -15,6 +15,7 @@ function populateRegionDropdown() {
   // Clear existing options except the first one (Select Region)
   if (regionSelect.options.length > 1) {
     regionSelect.remove(1);
+
   }
 
   // Add regions from the data
@@ -158,7 +159,7 @@ async function loadJsonData() {
     // Fetch JSON file
     const response = await fetch("./data/escom.json");
     if (!response.ok) {
-      throw new Error("Failed to load data");
+      throw new Error("Failed to load");
     }
 
     // Parse JSON data
