@@ -128,7 +128,7 @@ document.getElementById("area").addEventListener("change", function () {
 
 
 
-});
+
 // Initialize the dropdown when the page loads
 document.addEventListener("DOMContentLoaded", () => {
   initializeWithAPI();
