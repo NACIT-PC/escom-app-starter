@@ -21,124 +21,85 @@
     <div class="container">
       <div class="map-container">
         <!-- Map Section -->
-        <div class="flex content-fit flex-row justify-content-center align-items-center">
-          <i class="ph ph-map-pin  icon"></i>
-
-          <!-- <h1 class="text-lg">Group B1</h1> -->
-          <p class="text-sm gray ml-1">Nkhotakota, Boma</p>
-
+        <div class="flex content-fit">
+          <i class="ph ph-map-pin align-icon icon"></i>
+          <div class="flex flex-col">
+            <h1 class="text-lg">Group B1</h1>
+            <p class="text-sm gray">Nkhotakota, Boma</p>
+          </div>
         </div>
         <div id="map" class="map w-100 radius-sm"></div>
       </div>
       <div class="info-container">
         <!-- information Section -->
-
         <!-- search-bar  -->
-
         <div class="search-container">
-          <input   type="text" 
-          id="searchInput"  
-          autocomplete="off"
-          type="text" 
-          placeholder="Search area, location or group"
-          class="search-input"/>
-
-          <!-- <button class="search-button">
+          <input type="text" placeholder="Search area, location or group" class="search-input">
+          <button class="search-button">
             <i class="ph ph-magnifying-glass"></i>
-          </button> -->
-          
-          <div id="resultsContainer" class="results-container">
-            <!-- Results will be populated here -->
-        </div>
+          </button>
         </div>
         <div class="cont">
-          <div class="w-100">
-            <table id="data-table" class="w-100">
+          <h2>Table</h2>
+          <div class="table">
+            <table>
               <tr>
-                <th>ID</th>
-                <th>District</th>
-                <th>Locations</th>
-                <!-- <th>Time Off</th> -->
+                <th>Group</th>
+                <th>Location</th>
+                <th>Time On</th>
+                <th>Time Off</th>
+
               </tr>
-              
+              <tr>
+                <td>Group A</td>
+                <td>Chinsapo</td>
+                <td>11hrs</td>
+                <td>6am-7pm</td>
+
+              </tr>
+              <tr>
+                <td>Group B</td>
+                <td>Airwing</td>
+                <td>2hrs</td>
+                <td>6pm-9pm</td>
+
+              </tr>
+              <tr>
+                <td>Group C</td>
+                <td>Area 43</td>
+                <td>11hrs</td>
+                <td>7am-10pm</td>
+
+              </tr>
+              <tr>
+                <td>Group D</td>
+                <td>Area 44</td>
+                <td>8hrs</td>
+                <td>1pm-10pm</td>
+
+              </tr>
             </table>
           </div>
-          <div class="flex flex-col w-100">
-            <div class="flex content-fit  w-100 mb-3 p-4">
-              <div class="flex flex-row">
-                <div class="flex align-items-center">
-                  <i class="ph ph-funnel icon-sm"></i>
-                </div>
-                <div class="flex align-items-center ">
-                  <h1 class="text-sm ml-1">Filter</h1>
-                </div>
-              </div>
-            </div>
-            <div class="flex flex-row space-between p-4">
-              <!-- Group -->
-              <div class="flex flex-col">
-                <div class="flex-row flex mb-2">
-                  <div class="flex align-items-center">
-                    <i class="ph ph-map-pin-simple-area icon-sm"></i>
-                  </div>
-                  <div class="flex align-items-center">
-                    <label class="text-sm ml-1">Group</label>
-                  </div>
-                </div>
-                <div class="flex">
-                  <select name="group" id="group" class="styled-select">
-                    <option value="#">Select Group</option>
-                    <option value="a1">A1</option>
-                    <option value="b1">B1</option>
-                    <option value="b2">B2</option>
-                    <option value="c1">C1</option>
-                    <option value="c2">C2</option>
-                  </select>
-                </div>
-              </div>
-              <!-- Area -->
-              <div class="flex flex-col relative">
-                <div class="flex-row flex mb-2">
-                  <div class="flex align-items-center">
-                    <i class="ph ph-map-pin-simple icon-sm"></i>
-                  </div>
-                  <div class="flex align-items-center">
-                    <label class="text-sm ml-1">Area</label>
-                  </div>
-                </div>
-                <div class="flex">
-                  <select name="area" id="area" class="styled-select">
-                    <option value="#">Select Region First</option>
-                    
-                  </select>
-                </div>
-              </div>
+          <div class="filter">
+            <h1><img src="#" alt="icon"> filter</h1>
 
-              <!-- Region -->
-              <div class="flex flex-col">
-                <div class="flex-row flex mb-2">
-                  <div class="flex align-items-center">
-                    <i class="ph ph-map-pin-simple-line icon-sm"></i>
-                  </div>
-                  <div class="flex align-items-center">
-                    <label class="text-sm ml-1">Region</label>
-                  </div>
-                </div>
-                <div class="flex">
-                  <select name="region" id="region" class="styled-select">
-                    <option value="">Select Region</option>
-                  </select>
-                </div>
-              </div>
+            <div class="filt-input">
+
             </div>
+            <div class="filt-input">
+
+            </div>
+            <div class="filt-input">
+
+            </div>
+
           </div>
         </div>
+
       </div>
     </div>
   </div>
-  </div>
   <script src="./scripts/map.js"></script>
-  <script src="./scripts/api.js"></script>
 </body>
 
 </html>
