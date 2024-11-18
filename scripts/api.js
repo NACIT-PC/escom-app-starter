@@ -31,11 +31,7 @@ function populateAreaDropdown() {
 
   console.log("Area Element", areaSelect);
 
-  // if (regionData.areas.length > 1) {
-  //     areaSelect.remove(0);
-  //     const option = new Option("Select Area", "#");
-  //     areaSelect.add(option);
-  // }
+ 
 
   // Clear existing options except the first one (Select Region)
   if (areaSelect.options.length > 1) {
@@ -166,7 +162,8 @@ async function loadJsonData() {
     data = await response.json();
     console.log("searchData", data.data);
 
-   
+    //  const regionskeys =Object.keys(data.data.regions   );
+    //  console.log ('region keys',regionskeys);
 
     const regions = data.data.regions;
     console.log("region data", regions);
