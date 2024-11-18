@@ -162,8 +162,7 @@ async function loadJsonData() {
     data = await response.json();
     console.log("searchData", data.data);
 
-    //  const regionskeys =Object.keys(data.data.regions   );
-    //  console.log ('region keys',regionskeys);
+    
 
     const regions = data.data.regions;
     console.log("region data", regions);
