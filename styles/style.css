@@ -31,6 +31,18 @@ p {
   color: gray;
 }
 
+.m-auto {
+  margin: auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-0 {
+  inset: 0;
+}
+
 .flex {
   display: flex;
 }
@@ -39,7 +51,7 @@ p {
   flex-direction: column;
 }
 
-.flex-col {
+.flex-row {
   flex-direction: row;
 }
 
@@ -139,10 +151,14 @@ p {
   border-radius: 16px;
 }
 
+/* infor section*/
+
 .info-container {
   height: 100vh;
   width: 100vw;
 }
+
+/*search bar*/
 
 .search-container {
   display: flex;
@@ -269,3 +285,7 @@ select option {
   width: 20px; 
   height: 20px;
 } */
+.data-output {
+  display: flex;
+  flex-direction: column;
+}
