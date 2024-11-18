@@ -92,7 +92,7 @@ p {
 
 .map {
   height: 520px;
-  border: 2px solid black;
+
   z-index: -2;
 }
 
@@ -149,7 +149,7 @@ p {
   font-weight: lighter;
 }
 .dis-cont{
-  border: 2px solid black;
+padding-left: 20px;
   background-color: #cbdfc5;
   border-radius: 20px;
   align-items: baseline;
