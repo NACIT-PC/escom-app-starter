@@ -1,0 +1,180 @@
+{
+  "data": {
+    "regions": [
+      {
+        "id": "northern",
+        "name": "Northern Region",
+        "districts": [
+          {
+            "id": "chitipa",
+            "name": "Chitipa",
+            "areas": [
+              {
+                "id": "chitipa-central",
+                "name": "Chitipa Central",
+                "locations": ["Chitipa Boma", "Kaseye", "Nthalire"]
+              },
+              {
+                "id": "chitipa-north",
+                "name": "Chitipa North",
+                "locations": ["Kameme", "Misuku", "Wenya"]
+              }
+            ]
+          },
+          {
+            "id": "karonga",
+            "name": "Karonga",
+            "areas": [
+              {
+                "id": "karonga-central",
+                "name": "Karonga Central",
+                "locations": ["Karonga Boma", "Lupembe", "Nyungwe"]
+              },
+              {
+                "id": "karonga-north",
+                "name": "Karonga North",
+                "locations": ["Kaporo", "Kilipula", "Mpata"]
+              }
+            ]
+          },
+          {
+            "id": "mzimba",
+            "name": "Mzimba",
+            "areas": [
+              {
+                "id": "mzimba-central",
+                "name": "Mzimba Central",
+                "locations": ["Mzimba Boma", "Hora", "Kampingo"]
+              },
+              {
+                "id": "mzuzu-city",
+                "name": "Mzuzu City",
+                "locations": ["Chibavi", "Katoto", "Zolozolo"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "central",
+        "name": "Central Region",
+        "districts": [
+          {
+            "id": "lilongwe",
+            "name": "Lilongwe",
+            "areas": [
+              {
+                "id": "lilongwe-city",
+                "name": "Lilongwe City",
+                "locations": [
+                  "Area 3",
+                  "Area 25",
+                  "Area 49",
+                  "Kawale",
+                  "Old Town"
+                ]
+              },
+              {
+                "id": "lilongwe-rural",
+                "name": "Lilongwe Rural",
+                "locations": ["Chitsime", "Malingunde", "Mitundu"]
+              }
+            ]
+          },
+          {
+            "id": "kasungu",
+            "name": "Kasungu",
+            "areas": [
+              {
+                "id": "kasungu-central",
+                "name": "Kasungu Central",
+                "locations": ["Kasungu Boma", "Chulu", "Santhe"]
+              },
+              {
+                "id": "kasungu-east",
+                "name": "Kasungu East",
+                "locations": ["Chamama", "Mtunthama", "Wimbe"]
+              }
+            ]
+          },
+          {
+            "id": "dedza",
+            "name": "Dedza",
+            "areas": [
+              {
+                "id": "dedza-central",
+                "name": "Dedza Central",
+                "locations": ["Dedza Boma", "Linthipe", "Mayani"]
+              },
+              {
+                "id": "dedza-east",
+                "name": "Dedza East",
+                "locations": ["Golomoti", "Lobi", "Mtakataka"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "southern",
+        "name": "Southern Region",
+        "districts": [
+          {
+            "id": "blantyre",
+            "name": "Blantyre",
+            "areas": [
+              {
+                "id": "blantyre-city",
+                "name": "Blantyre City",
+                "locations": ["Limbe", "Ndirande", "Chilomoni", "Namiwawa"]
+              },
+              {
+                "id": "blantyre-rural",
+                "name": "Blantyre Rural",
+                "locations": ["Chileka", "Lunzu", "Lirangwe"]
+              }
+            ]
+          },
+          {
+            "id": "zomba",
+            "name": "Zomba",
+            "areas": [
+              {
+                "id": "zomba-city",
+                "name": "Zomba City",
+                "locations": ["Zomba Central", "Matawale", "Chinamwali"]
+              },
+              {
+                "id": "zomba-rural",
+                "name": "Zomba Rural",
+                "locations": ["Thondwe", "Masaula", "Chingale"]
+              }
+            ]
+          },
+          {
+            "id": "mangochi",
+            "name": "Mangochi",
+            "areas": [
+              {
+                "id": "mangochi-central",
+                "name": "Mangochi Central",
+                "locations": ["Mangochi Boma", "Monkey Bay", "Malindi"]
+              },
+              {
+                "id": "mangochi-lakeshore",
+                "name": "Mangochi Lakeshore",
+                "locations": ["Cape Maclear", "Nkope", "Namwera"]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "total_regions": 3,
+      "total_districts": 28,
+      "last_updated": "2024-01-01",
+      "version": "1.0"
+    }
+  }
+}
