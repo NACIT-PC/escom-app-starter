@@ -37,20 +37,28 @@ function populateAreaDropdown() {
   //     areaSelect.add(option);
   // }
 
-  // Clear existing options except the first one (Select Region)
-  if (areaSelect.options.length > 1) {
-    areaSelect.remove(1);
-  }
+    // Clear existing options except the first one (Select Region)
+    if (areaSelect.options.length > 1) {
+        console.log(areaSelect.option);
+        areaSelect.innerHTML = ' ';
+        const option = new Option("Select Region First", "#");
+        areaSelect.add(option);
+    }
 
-  // Add regions from the data
-  for (const area of regionData.areas) {
-    const option = new Option(area.name, area.id);
-    areaSelect.add(option);
-  }
+
+
+    for (let index = 0; index < regionData.areas.length; index++) {
+        const option = new Option(regionData.areas[index].name, regionData.areas[index].id);
+        areaSelect.add(option);
+    }
+
+
+
 }
 
 // Function to populate the region dropdown
 function populateTableData() {
+
   const locationSelect = document.getElementById("data-table");
 
   console.log("Table Element", locationSelect);
@@ -113,10 +121,14 @@ document.getElementById("area").addEventListener("change", function () {
   // You can use this data to populate a district dropdown if needed
   console.log("Selected Area Locations:", locations);
 
+
   regionData.locations = locations;
   populateTableData();
 });
 
+
+
+});
 // Initialize the dropdown when the page loads
 document.addEventListener("DOMContentLoaded", () => {
   initializeWithAPI();
