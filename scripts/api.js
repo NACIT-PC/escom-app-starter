@@ -43,13 +43,10 @@ function populateAreaDropdown() {
         areaSelect.add(option);
     }
 
-
-
     for (let index = 0; index < regionData.areas.length; index++) {
         const option = new Option(regionData.areas[index].name, regionData.areas[index].id);
         areaSelect.add(option);
     }
-
 
 }
 
