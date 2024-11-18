@@ -38,7 +38,6 @@ function populateAreaDropdown() {
 
     // Clear existing options except the first one (Select Region)
     if (areaSelect.options.length > 1) {
-        console.log(areaSelect.option);
         areaSelect.innerHTML = ' ';
         const option = new Option("Select Region First", "#");
         areaSelect.add(option);
@@ -60,7 +59,9 @@ function populateTableData() {
     const placeholders = document.getElementById("placeholder");
     // Clear existing table content
     tableElement.innerHTML = "";
-    placeholders.remove();
+    if (placeholders) {
+        placeholders.remove();
+    }
 
     // Add header row
     const headerRow = document.createElement("tr");
