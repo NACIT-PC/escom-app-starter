@@ -134,8 +134,7 @@ document.getElementById("area").addEventListener("change", function () {
 
     regionData.locations = locations;
     populateTableData();
-
-
+});
 
 // Initialize the dropdown when the page loads
 document.addEventListener("DOMContentLoaded", () => {
