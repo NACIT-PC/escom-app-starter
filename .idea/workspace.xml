@@ -51,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "feature-data-filter",
+    "git-widget-placeholder": "fix-data-filter-drop-down",
     "last_opened_file_path": "C:/Users/pdmga/Documents/GitHub/fluttermalawi-event",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -84,7 +84,7 @@
       <workItem from="1731312114829" duration="1232000" />
       <workItem from="1731876275570" duration="1680000" />
       <workItem from="1731928638826" duration="3970000" />
-      <workItem from="1732002107133" duration="322000" />
+      <workItem from="1732002107133" duration="892000" />
     </task>
     <servers />
   </component>
