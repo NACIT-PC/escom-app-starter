@@ -4,6 +4,12 @@ const regionData = {
     locations: [],
 };
 
+// Search Bar
+let data = [];
+const searchInput = document.getElementById("searchInput");
+console.log(searchInput);
+const districtsResultsContainer = document.getElementById("DistrictsResultsContainer");
+const regionResultsContainer = document.getElementById("RegionResultsContainer");
 let selectedRegionId = "";
 const selectedDistrictId = "";
 // Function to populate the region dropdown
@@ -96,6 +102,7 @@ function populateLocations() {
         areaSelect.add(option);
     }
 }
+
 // Function to get districts for a selected region
 function getDistricts(regionId) {
     const region = regionData.regions.find((r) => r.id === regionId);
@@ -134,8 +141,6 @@ document.getElementById("area").addEventListener("change", function () {
 
     regionData.locations = locations;
     populateTableData();
-
-
 });
 // Initialize the dropdown when the page loads
 document.addEventListener("DOMContentLoaded", () => {
@@ -146,47 +151,25 @@ document.addEventListener("DOMContentLoaded", () => {
 async function fetchRegionData() {
     try {
         const response = await fetch("./data/escom.json");
-        const data = await response.json();
-        return data;
+		 return await response.json();
     } catch (error) {
         console.error("Error fetching region data:", error);
         return null;
     }
 }
 
-// Example usage with API:
-
-async function initializeWithAPI() {
-    const response = await fetchRegionData();
-    console.log(response.data);
-    if (response) {
-        regionData.regions = response.data.regions;
-        populateRegionDropdown();
-    }
-}
-
-
-// Search Bar
-// Initialize variables
-let data = [];
-const searchInput = document.getElementById("searchInput");
-console.log(searchInput);
-const resultsContainer = document.getElementById("resultsContainer");
-
 // Load JSON data when page loads
 document.addEventListener("DOMContentLoaded", () => {
   loadJsonData();
   searchInput = document.getElementById("searchInput").value.toLowerCase();
   console.log("search term", searchInput);
-  // Add event listener for search input
-  searchInput.addEventListener("input", handleSearch);
 });
 
 // Function to load JSON data
 async function loadJsonData() {
   try {
     // Show loading message
-    resultsContainer.innerHTML = '<div class="loading">Loading data...</div>';
+    districtsResultsContainer.innerHTML = '<div class="loading">Loading data...</div>';
 
     // Fetch JSON file
     const response = await fetch("./data/escom.json");
@@ -209,8 +192,18 @@ async function loadJsonData() {
     }
 
     searchInput.addEventListener("input", (event) => {
-      searchRegions(event.target.value);
-      searchDistricts(event.target.value);
+    
+		
+		if(event.target.value.length > 1) {
+			let filteredDistrictResults = searchDistricts(event.target.value);
+			let filteredRegionResults = searchRegions(event.target.value);
+			displayDistrictResults(filteredDistrictResults, event.target.value);
+			displayRegionResults(filteredRegionResults, event.target.value);
+		} else {
+			 districtsResultsContainer.innerHTML = ""
+			regionResultsContainer.innerHTML = ""
+		}
+		
     });
 
     function searchRegions(inputValue) {
@@ -251,6 +244,7 @@ async function loadJsonData() {
 
       );
       console.log("filtered districts", filteredDistricts);
+		return filteredDistricts;
     }
 	 
 	 function searchLocations(inputValue) {
@@ -281,10 +275,10 @@ async function loadJsonData() {
     }
 
     // Clear loading message
-    resultsContainer.innerHTML = "";
+    districtsResultsContainer.innerHTML = "";
   } catch (error) {
     // Show error message
-    resultsContainer.innerHTML = `
+    districtsResultsContainer.innerHTML = `
              <div class="error">
                  Error loading data: ${error.message}
                  <br>Please make sure your JSON file exists and is accessible.
@@ -294,50 +288,48 @@ async function loadJsonData() {
   }
 }
 
-// Function to handle search
-function handleSearch(e) {
-  const searchTerm = e.target.value.toLowerCase().trim();
-
-  // Clear results if search term is empty
-  if (!searchTerm) {
-    resultsContainer.innerHTML = "";
-    return;
-  }
-
-  // Filter results
-  const filteredResults = data.filter(
-    (item) =>
-      item.title.toLowerCase().includes(searchTerm) ||
-      item.description.toLowerCase().includes(searchTerm)
-  );
-
-  // Display results
-  displayResults(filteredResults, searchTerm);
-}
-
 // Function to display results
-function displayResults(results, searchTerm) {
+function displayDistrictResults(results, searchTerm) {
   if (results.length === 0) {
-    resultsContainer.innerHTML = `
+    districtsResultsContainer.innerHTML = `
              <div class="no-results">
-                 No results found for "${searchTerm}"
+                 No Districts found for "${searchTerm}"
              </div>
          `;
     return;
   }
 
-  const resultsHTML = results
-    .map(
-      (item) => `
-         <div class="result-item">
-             <h3>${highlightText(item.title, searchTerm)}</h3>
-             <p>${highlightText(item.description, searchTerm)}</p>
-         </div>
-     `
-    )
-    .join("");
+	districtsResultsContainer.innerHTML = `
+         <ul class="result-item">
+             <li>${highlightText(item, searchTerm)}</li>
+         </ul>
+     `;
+		
+		results
+	  .map((item) => `
+         <ul class="result-item">
+             <li>${highlightText(item, searchTerm)}</li>
+         </ul>
+     `)
+	  .join("");
+}
+function displayRegionResults(results, searchTerm) {
+  if (results.length === 0) {
+    regionResultsContainer.innerHTML = `
+             <div class="no-results">
+                 No Regions found for "${searchTerm}"
+             </div>
+         `;
+    return;
+  }
 
-  resultsContainer.innerHTML = resultsHTML;
+	 regionResultsContainer.innerHTML = results
+	  .map((item) => `
+         <ul class="result-item">
+             <li>${highlightText(item.name, searchTerm)}</li>
+         </ul>
+     `)
+	  .join("");
 }
 
 // Function to highlight matching text
@@ -345,8 +337,6 @@ function highlightText(text, searchTerm) {
   const regex = new RegExp(`(${searchTerm})`, "gi");
   return text.replace(regex, '<span class="highlight">$1</span>');
 }
-
-// Example usage with API:
 
 async function initializeWithAPI() {
   const response = await fetchRegionData();
