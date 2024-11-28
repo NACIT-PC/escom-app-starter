@@ -32,25 +32,26 @@
       </div>
       <div class="info-container">
         <!-- information Section -->
-        <!-- search-bar  -->
-
            <!-- search-bar  -->
-
-           <div class="search-container">
-            <input   type="text" 
+           <div class="search-container flex-row justify-content-center align-items-center">
+               <label for="searchInput"></label>
+               <input
             id="searchInput"  
             autocomplete="off"
             type="text" 
             placeholder="Search area, location or group"
-            class="search-input"/>
+            class="search-input flex justify-center"/>
               <!-- <button class="search-button">
             <i class="ph ph-magnifying-glass"></i>
           </button> -->
           
-          <div id="resultsContainer" class="results-container">
+
             <!-- Results will be populated here -->
         </div>
+          <div id="DistrictsResultsContainer" class="flex section-indicator h-20">
+
         </div>
+          <div id="RegionResultsContainer" class="flex section-indicator h-20"></div>
         <div class="cont">
           <div class="w-100">
             <table id="data-table"  class="w-100">
