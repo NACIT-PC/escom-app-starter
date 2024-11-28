@@ -201,10 +201,10 @@ async function loadJsonData() {
     
 
     const regions = data.regions;
-    console.log("region data", regions);
+    // console.log("region data", regions);
 
     for (region of regions) {
-      console.log(region.name);
+      // console.log(region.name);
       const regionNames = region.name;
     }
 
@@ -214,34 +214,68 @@ async function loadJsonData() {
     });
 
     function searchRegions(inputValue) {
-      const districts = region.districts;
-      const filteredRegions = regions.filter((regions) =>
-        regions.name.toLowerCase().includes(inputValue)
-      );
-      console.log("filtered data", filteredRegions);
-      const filteredDistricts = districts.filter((districts) =>
-        districts.name.toLowerCase().includes(inputValue)
-      );
-    }
+  // console.log('Starting search with input:', inputValue);
+  
+  // Search in regions
+  const filteredRegions = regions.filter((region) => {
+    // console.log('Checking region:', region.name);
+    return region.name.toLowerCase().includes(inputValue.toLowerCase());
+  });
+  
+  console.log("filtered regions:", filteredRegions);
+  return filteredRegions;
+}
 
     function searchDistricts(inputValue) {
       const districtsNames = new Set([]);
      for (const region of regions) {
-        console.log(region)
+        // console.log(region)
         for (let index = 0; index < regions.length; index++) {
-            console.log('number of regions',regions.length)
-            console.log("district names", regions[index].districts);
+            // console.log('number of regions',regions.length)
+            // console.log("district names", regions[index].districts);
             for (const district of regions[index].districts) {
-                console.log('names of district', district.name)
+                // console.log('names of district', district.name)
                 districtsNames.add(district.name);
                 
             }
           }
         
      }
-      console.log('district names array', districtsNames);
-      const filteredDistricts = [...districtsNames].filter((district) =>
-        district.toLowerCase().includes(inputValue)
+      // console.log('district names array', districtsNames);
+      const filteredDistricts = [...districtsNames].filter((district) => {
+			 const districtLower = district.toLowerCase();
+			 const searchTermLower = inputValue.toLowerCase();
+			 // Check if the district name contains the search term in any case
+			return districtLower.includes(searchTermLower);
+		 }
+
+      );
+      console.log("filtered districts", filteredDistricts);
+    }
+	 
+	 function searchLocations(inputValue) {
+      const districtsNames = new Set([]);
+     for (const region of regions) {
+        // console.log(region)
+        for (let index = 0; index < regions.length; index++) {
+            // console.log('number of regions',regions.length)
+            // console.log("district names", regions[index].districts);
+            for (const district of regions[index].districts) {
+                // console.log('names of district', district.name)
+                districtsNames.add(district.name);
+                
+            }
+          }
+        
+     }
+      // console.log('district names array', districtsNames);
+      const filteredDistricts = [...districtsNames].filter((district) => {
+			 const districtLower = district.toLowerCase();
+			 const searchTermLower = inputValue.toLowerCase();
+			 // Check if the district name contains the search term in any case
+			return districtLower.includes(searchTermLower);
+		 }
+
       );
       console.log("filtered districts", filteredDistricts);
     }
