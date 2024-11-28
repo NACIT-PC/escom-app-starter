@@ -196,11 +196,11 @@ async function loadJsonData() {
 
     // Parse JSON data
     data = await response.json();
-    console.log("searchData", data.data);
+    console.log("searchData", data);
 
     
 
-    const regions = data.data.regions;
+    const regions = data.regions;
     console.log("region data", regions);
 
     for (region of regions) {
@@ -316,9 +316,9 @@ function highlightText(text, searchTerm) {
 
 async function initializeWithAPI() {
   const response = await fetchRegionData();
-  console.log(response.data);
+  console.log(response);
   if (response) {
-    regionData.regions = response.data.regions;
+    regionData.regions = response.regions;
     populateRegionDropdown();
   }
 }

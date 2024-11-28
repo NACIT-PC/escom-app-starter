@@ -1,5 +1,4 @@
 {
-  "data": {
     "regions": [
       {
         "id": "northern",
@@ -277,4 +276,3 @@
       "version": "1.0"
     }
   }
-}
