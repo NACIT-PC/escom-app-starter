@@ -59,6 +59,7 @@ function populateAreaDropdown() {
 
 }
 
+
 // Function to populate the region dropdown
 function populateTableData() {
     const tableElement = document.getElementById("data-table");
@@ -290,21 +291,32 @@ async function loadJsonData() {
 
 // Function to display results
 function displayDistrictResults(results, searchTerm) {
-  if (results.length === 0) {
-    districtsResultsContainer.innerHTML = `
-             <div class="no-results">
-                 No Districts found for "${searchTerm}"
-             </div>
-         `;
-    return;
+  // Ensure districtsResultsContainer exists and is valid
+  if (!districtsResultsContainer || typeof districtsResultsContainer.innerHTML === 'undefined') {
+      console.error("Error: 'districtsResultsContainer' is not defined or invalid.");
+      return;
   }
 
-	districtsResultsContainer.innerHTML = `
-         <ul class="result-item">
-             <li>${highlightText(item, searchTerm)}</li>
-         </ul>
-     `;
-		
+  // If results are empty, display "No Districts found"
+  if (!Array.isArray(results) || results.length === 0) {
+      districtsResultsContainer.innerHTML = `
+          <div class="no-results">
+              No Districts found for "${searchTerm}"
+          </div>
+      `;
+      return;
+  }
+
+  // If results are present, display them
+  const resultsHtml = results.map(district => `
+      <div class="district-result">
+          ${district}
+      </div>
+  `).join('');
+
+  districtsResultsContainer.innerHTML = resultsHtml;
+
+
 		results
 	  .map((item) => `
          <ul class="result-item">
