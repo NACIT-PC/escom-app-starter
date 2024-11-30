@@ -48,16 +48,17 @@
 
             <!-- Results will be populated here -->
         </div>
-          <div id="DistrictsResultsContainer" class="flex section-indicator h-20">
-
+          <div class="section-indicator">
+              <div id="DistrictsResultsContainer" class="flex h-20">
+              <div id="RegionResultsContainer" class="flex h-20"></div>
+          </div>
         </div>
-          <div id="RegionResultsContainer" class="flex section-indicator h-20"></div>
         <div class="cont">
           <div class="w-100">
             <table id="data-table"  class="w-100">
               <div class="h-100 relative inset-0 flex item-center" id="placeholder">
                 <p class="m-auto">please use the filter below to get data</p>
-                
+
               </div>
               <tr  class="hidden">
 
@@ -138,7 +139,6 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
   <script src="./scripts/map.js" defer></script>
   <script src="./scripts/api.js" defer></script>
