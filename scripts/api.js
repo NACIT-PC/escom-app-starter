@@ -299,13 +299,7 @@ function displayDistrictResults(results, searchTerm) {
     return;
   }
 
-	districtsResultsContainer.innerHTML = `
-         <ul class="result-item">
-             <li>${highlightText(item, searchTerm)}</li>
-         </ul>
-     `;
-		
-		results
+	districtsResultsContainer.innerHTML = results
 	  .map((item) => `
          <ul class="result-item">
              <li>${highlightText(item, searchTerm)}</li>
