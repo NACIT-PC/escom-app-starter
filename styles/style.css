@@ -275,11 +275,6 @@ select option {
   padding: 4px;
 }
 
-.map {
-  height: 520px;
-  z-index: -2;
-}
-
 .grid {
   display: grid;
 }
