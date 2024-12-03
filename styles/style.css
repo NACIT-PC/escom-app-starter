@@ -42,18 +42,6 @@ p {
   color: gray;
 }
 
-.m-auto {
-  margin: auto;
-}
-
-.relative {
-  position: relative;
-}
-
-.inset-0 {
-  inset: 0;
-}
-
 .flex {
   display: flex;
 }
@@ -62,7 +50,7 @@ p {
   flex-direction: column;
 }
 
-.flex-row {
+.flex-col {
   flex-direction: row;
 }
 

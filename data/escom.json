@@ -17,16 +17,6 @@
                 "id": "chitipa-north",
                 "name": "Chitipa North",
                 "locations": ["Kameme", "Misuku", "Wenya"]
-              },
-              {
-                "id": "chitipa-south",
-                "name": "Chitipa South",
-                "locations": ["Ifumbo", "Uledi", "Mwamulowe"]
-              },
-              {
-                "id": "chitipa-east",
-                "name": "Chitipa East",
-                "locations": ["Chisenga", "Kapoka", "Kawale"]
               }
             ]
           },
@@ -43,16 +33,6 @@
                 "id": "karonga-north",
                 "name": "Karonga North",
                 "locations": ["Kaporo", "Kilipula", "Mpata"]
-              },
-              {
-                "id": "karonga-south",
-                "name": "Karonga South",
-                "locations": ["Chilumba", "Kasoba", "Ngara"]
-              },
-              {
-                "id": "karonga-west",
-                "name": "Karonga West",
-                "locations": ["Ipyana", "Kasantha", "Mwangulukulu"]
               }
             ]
           },
@@ -69,21 +49,6 @@
                 "id": "mzuzu-city",
                 "name": "Mzuzu City",
                 "locations": ["Chibavi", "Katoto", "Zolozolo"]
-              },
-              {
-                "id": "mzimba-south",
-                "name": "Mzimba South",
-                "locations": ["Ekwendeni", "Luwerezi", "Embangweni"]
-              },
-              {
-                "id": "mzimba-north",
-                "name": "Mzimba North",
-                "locations": ["Euthini", "Mpherembe", "Edingeni"]
-              },
-              {
-                "id": "mzimba-west",
-                "name": "Mzimba West",
-                "locations": ["Khosolo", "Mzalangwe", "Mabiri"]
               }
             ]
           }
@@ -112,21 +77,6 @@
                 "id": "lilongwe-rural",
                 "name": "Lilongwe Rural",
                 "locations": ["Chitsime", "Malingunde", "Mitundu"]
-              },
-              {
-                "id": "lilongwe-north",
-                "name": "Lilongwe North",
-                "locations": ["Nsaru", "Kabudula", "Chimbalanga"]
-              },
-              {
-                "id": "lilongwe-east",
-                "name": "Lilongwe East",
-                "locations": ["Nkhoma", "Chileka", "Msundwe"]
-              },
-              {
-                "id": "lilongwe-south",
-                "name": "Lilongwe South",
-                "locations": ["Mkwinda", "Chitedze", "Namitete"]
               }
             ]
           },
@@ -143,16 +93,6 @@
                 "id": "kasungu-east",
                 "name": "Kasungu East",
                 "locations": ["Chamama", "Mtunthama", "Wimbe"]
-              },
-              {
-                "id": "kasungu-north",
-                "name": "Kasungu North",
-                "locations": ["Chilanga", "Kaluluma", "Mphomwa"]
-              },
-              {
-                "id": "kasungu-west",
-                "name": "Kasungu West",
-                "locations": ["Chatoloma", "Simulemba", "Kaphaizi"]
               }
             ]
           },
@@ -169,16 +109,6 @@
                 "id": "dedza-east",
                 "name": "Dedza East",
                 "locations": ["Golomoti", "Lobi", "Mtakataka"]
-              },
-              {
-                "id": "dedza-north",
-                "name": "Dedza North",
-                "locations": ["Bembeke", "Kaphuka", "Tcheza"]
-              },
-              {
-                "id": "dedza-south",
-                "name": "Dedza South",
-                "locations": ["Mchinj", "Chilikumwendo", "Kachindamoto"]
               }
             ]
           }
@@ -201,16 +131,6 @@
                 "id": "blantyre-rural",
                 "name": "Blantyre Rural",
                 "locations": ["Chileka", "Lunzu", "Lirangwe"]
-              },
-              {
-                "id": "blantyre-north",
-                "name": "Blantyre North",
-                "locations": ["Mpemba", "Chigumula", "Mdeka"]
-              },
-              {
-                "id": "blantyre-south",
-                "name": "Blantyre South",
-                "locations": ["Bangwe", "Machinjiri", "Manyowe"]
               }
             ]
           },
@@ -227,16 +147,6 @@
                 "id": "zomba-rural",
                 "name": "Zomba Rural",
                 "locations": ["Thondwe", "Masaula", "Chingale"]
-              },
-              {
-                "id": "zomba-north",
-                "name": "Zomba North",
-                "locations": ["Likangala", "Mulunguzi", "Domasi"]
-              },
-              {
-                "id": "zomba-south",
-                "name": "Zomba South",
-                "locations": ["Jali", "Makwapala", "Ngwelero"]
               }
             ]
           },
@@ -253,16 +163,6 @@
                 "id": "mangochi-lakeshore",
                 "name": "Mangochi Lakeshore",
                 "locations": ["Cape Maclear", "Nkope", "Namwera"]
-              },
-              {
-                "id": "mangochi-south",
-                "name": "Mangochi South",
-                "locations": ["Makanjira", "Jalasi", "Katuli"]
-              },
-              {
-                "id": "mangochi-west",
-                "name": "Mangochi West",
-                "locations": ["Mtakataka", "Mponda", "Chilipa"]
               }
             ]
           }
