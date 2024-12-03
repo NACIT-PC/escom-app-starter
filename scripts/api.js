@@ -111,7 +111,7 @@ function populateTableData() {
     // Add header row
     const headerRow = document.createElement("tr");
     headerRow.innerHTML = `
-            < th > ID</th >
+            <th>ID</th>
         <th>Name</th>
         <th>Locations</th>
     `;
@@ -121,7 +121,7 @@ function populateTableData() {
     for (const location of regionData.locations) {
         const row = document.createElement("tr");
         row.innerHTML = `
-        < td > ${location.id}</td >
+            <td>${location.id}</td>
             <td>${location.name}</td>
             <td>${location.locations}</td>
     `;
