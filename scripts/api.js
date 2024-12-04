@@ -366,7 +366,7 @@ function displayDistrictResults(results, searchTerm) {
     // If results are empty, display "No Districts found"
     if (!Array.isArray(results) || results.length === 0) {
         districtsResultsContainer.innerHTML = `
-        < div class="no-results" >
+        <div class="no-results" >
             No Districts found for "${searchTerm}"
           </div >
         `;
@@ -377,9 +377,9 @@ function displayDistrictResults(results, searchTerm) {
     const resultsHtml = results
         .map(
             (district) => `
-        < div class="district-result" >
+        <div class="district-result" >
             ${district}
-      </div >
+      </ >
         `,
         )
         .join("");
@@ -389,7 +389,7 @@ function displayDistrictResults(results, searchTerm) {
     results
         .map(
             (item) => `
-        < ul class="result-item" >
+        <ul class="result-item" >
             <li>${highlightText(item, searchTerm)}</li>
          </ul >
         `,
@@ -399,7 +399,7 @@ function displayDistrictResults(results, searchTerm) {
 function displayRegionResults(results, searchTerm) {
     if (results.length === 0) {
         regionResultsContainer.innerHTML = `
-        < div class="no-results" >
+        <div class="no-results" >
             No Regions found for "${searchTerm}"
              </div >
         `;
@@ -409,7 +409,7 @@ function displayRegionResults(results, searchTerm) {
     regionResultsContainer.innerHTML = results
         .map(
             (item) => `
-        < ul class="result-item" >
+        <ul class="result-item" >
             <li>${highlightText(item.name, searchTerm)}</li>
          </ul >
         `,
