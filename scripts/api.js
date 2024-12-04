@@ -341,7 +341,7 @@ async function loadJsonData() {
     } catch (error) {
         // Show error message
         districtsResultsContainer.innerHTML = `
-        < div class="error" >
+        <div class="error" >
             Error loading data: ${error.message}
     <br>Please make sure your JSON file exists and is accessible.
     </div>
