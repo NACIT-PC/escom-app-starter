@@ -379,7 +379,7 @@ function displayDistrictResults(results, searchTerm) {
             (district) => `
         <div class="district-result" >
             ${district}
-      </div >
+      </ >
         `,
         )
         .join("");
